@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./index.css";
+import Card from "./Card";
 
 function App() {
+  const [cards, setCards] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <section className="container">
+        <h1>Dominion Selector</h1>
+        <button className="btn">Generate Kingdom</button>
+        <article className="setup">
+          <h3>Setup</h3>
+        </article>
+        <h2>Cards</h2>
+        <article className="cards">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </article>
+        <article className="extras">
+          <h2>extras</h2>
+        </article>
+      </section>
+    </main>
   );
 }
 
