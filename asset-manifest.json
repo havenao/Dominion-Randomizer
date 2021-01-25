@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Dominion-Randomizer/static/css/main.828b93a6.chunk.css",
+    "main.js": "/Dominion-Randomizer/static/js/main.5e372665.chunk.js",
+    "main.js.map": "/Dominion-Randomizer/static/js/main.5e372665.chunk.js.map",
+    "runtime-main.js": "/Dominion-Randomizer/static/js/runtime-main.804eaa79.js",
+    "runtime-main.js.map": "/Dominion-Randomizer/static/js/runtime-main.804eaa79.js.map",
+    "static/js/2.db01081a.chunk.js": "/Dominion-Randomizer/static/js/2.db01081a.chunk.js",
+    "static/js/2.db01081a.chunk.js.map": "/Dominion-Randomizer/static/js/2.db01081a.chunk.js.map",
+    "static/js/3.133de34a.chunk.js": "/Dominion-Randomizer/static/js/3.133de34a.chunk.js",
+    "static/js/3.133de34a.chunk.js.map": "/Dominion-Randomizer/static/js/3.133de34a.chunk.js.map",
+    "index.html": "/Dominion-Randomizer/index.html",
+    "static/css/main.828b93a6.chunk.css.map": "/Dominion-Randomizer/static/css/main.828b93a6.chunk.css.map",
+    "static/js/2.db01081a.chunk.js.LICENSE.txt": "/Dominion-Randomizer/static/js/2.db01081a.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Dominion-Randomizer/static/media/SeasideArt.ac5e7ece.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.804eaa79.js",
+    "static/js/2.db01081a.chunk.js",
+    "static/css/main.828b93a6.chunk.css",
+    "static/js/main.5e372665.chunk.js"
+  ]
+}
