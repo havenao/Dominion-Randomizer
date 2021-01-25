@@ -38,7 +38,7 @@ Variables
   --clr-black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
-  --radius: 0.25rem;
+  --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
@@ -58,15 +58,16 @@ Global Styles
   box-sizing: border-box;
 }
 html {
-  background-image: url(./images/SeasideArt.jpg);
+  background-image: url(./SeasideArt.jpg);
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-position: absolute;
+  background-repeat: repeat;
   background-color: var(--clr-grey-6);
   background-blend-mode: screen;
+  height: 60rem;
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -92,7 +93,6 @@ h4 {
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
 }
 h1 {
   font-size: 3rem;
@@ -133,42 +133,182 @@ p {
     line-height: 1;
   }
 }
+
 /*  global classes */
-
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
 }
-
 .container {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 60rem;
-  margin: 5rem;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#dom-logo {
+  box-shadow: black 0 4px 10px 0px;
+  border-radius: var(--radius);
+}
+
+.title {
+  color: #fff;
+  width: 75%;
+  margin: 5rem 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  transform: translateY(-2.2rem);
+  z-index: 2;
+}
+
+.off {
+  display: none;
 }
 
 .btn {
-  background: var(--clr-primary-5);
+  background: var(--clr-green-dark);
   padding: 0.5rem 1rem;
   margin: 1rem;
+  margin-top: 2rem;
   font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: black 4px 4px 10px 0px;
   border-color: transparent;
   border-radius: var(--radius);
   text-transform: capitalize;
   color: var(--clr-white);
   cursor: pointer;
+  outline: none;
 }
+
 .cards {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1300px;
+  margin: 1rem 2rem;
+
+  box-shadow: rgba(245, 212, 245, 0.5) 0 0 10px 10px;
+  background-color: rgba(245, 212, 245, 0.5);
+  border-radius: var(--radius);
 }
 .card {
-  border-radius: var(--radius);
-  border: 5px solid var(--clr-grey-1);
-  background-color: var(--clr-grey-6);
   width: 14rem;
-  height: 10rem;
+}
+
+.extras {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  box-shadow: rgba(255, 254, 238, 0.5) 0 0 10px 10px;
+  background-color: rgba(255, 254, 238, 0.5);
+  border-radius: var(--radius);
+}
+.extra {
+  width: 20rem;
+}
+
+.setup {
+  margin: 1rem;
+  box-shadow: rgba(178, 225, 197, 0.25) 0 0 10px 10px;
+  background-color: rgba(178, 225, 197, 0.25);
+  border-radius: var(--radius);
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.setup-item-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 60rem;
+}
+
+.setup-item {
+  background-color: var(--clr-primary-7);
+  border-radius: var(--radius);
+
+  padding: 0.5rem 1rem;
   margin: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: black 4px 4px 10px 0px;
+}
+.item {
+  height: 10rem;
+  margin: 1rem 1rem;
+  display: block;
+  box-shadow: black 4px 4px 10px 2px;
+  border: 2px solid var(--clr-grey-1);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+img {
+  background-color: var(--clr-grey-1);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-text {
+  background-color: var(--clr-primary-10);
+  border-radius: 1rem;
+  border: 2px solid var(--clr-grey-1);
+  padding: 0.3rem 0.6rem;
+  transform: translateY(1rem);
+  position: absolute;
+}
+
+.extra > img {
+  height: 8rem;
+}
+
+.extra-label {
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.way {
+  background-color: lightblue;
+}
+.event {
+  background-color: gray;
+}
+.landmark {
+  background-color: green;
+}
+.project {
+  background-color: salmon;
+}
+.heirloom {
+  background-color: gold;
+}
+
+.underline {
+  width: 10rem;
+  height: 0.25rem;
+  background: var(--clr-primary-5);
+  margin: 1rem;
 }
