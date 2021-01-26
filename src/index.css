@@ -33,8 +33,8 @@ Variables
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-green-light: hsl(125, 67%, 44%);
+  --clr-green-dark: hsl(125, 68%, 36%);
   --clr-black: #222;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
@@ -160,7 +160,7 @@ header {
 }
 
 .title {
-  color: #fff;
+  color: var(--clr-white);
   width: 75%;
   margin: 5rem 0;
 }
@@ -176,19 +176,29 @@ header {
 }
 
 .btn {
-  background: var(--clr-green-dark);
+  background: var(--clr-green-light);
   padding: 0.5rem 1rem;
   margin: 1rem;
   margin-top: 2rem;
   font-size: 1.2rem;
   font-weight: 700;
-  box-shadow: black 4px 4px 10px 0px;
+  box-shadow: black 0 4px 10px 0px;
   border-color: transparent;
   border-radius: var(--radius);
   text-transform: capitalize;
   color: var(--clr-white);
   cursor: pointer;
   outline: none;
+  transition: ease 0.2s;
+}
+
+.btn:hover {
+  border: 2px solid var(--clr-white);
+}
+.btn:active {
+  background: var(--clr-green-dark);
+  box-shadow: black 1px 1px 5px 0px;
+  transform: translateY(4px);
 }
 
 .cards {
