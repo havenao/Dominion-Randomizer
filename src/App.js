@@ -120,11 +120,11 @@ function App() {
         >
           Generate Kingdom
         </button>
-        <div className="underline"></div>
+        <div className={ready && "underline"}></div>
       </header>
       <section className="container">
         <article className={ready && "setup"}>
-          <div className="setup-item-container">
+          <div className={setup.length > 0 && "setup-item-container"}>
             {setup.map((item, index) => {
               return <SetupItem item={item} key={index} />;
             })}
